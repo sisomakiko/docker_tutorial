@@ -1,5 +1,9 @@
-#ベースとなるimage
 FROM ubuntu:latest
 
-#サンプルファイルを作成する
-RUN touch test
+RUN apt-get update && apt-get install -y \
+curl \
+nginx
+
+RUN apt-get install -y cvs
+
+CMD ["ls"]
